@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import NavBar from './components/NavBar.js'
 class Application extends React.Component {
   constructor(props) {
@@ -7,38 +6,31 @@ class Application extends React.Component {
     this.state = {
       value: ''
     };
-
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
     this.setState({value: event.target.value});
   }
 
-  handleSubmit(event) {
-    alert('An essay was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
   render() {
     return (
-      <div className="Application">
+      <div style={styles.Application}>
         <NavBar/>
         <h2 style={{'fontWeight': 'bold'}}>Tell us about your business.</h2>
         <form>
-          <label className="inputLabel">
+          <label style={styles.inputLabel}>
             Name of business
             <div className="section"/>
             <div className="row">
-              <input type="text" name="name" className="col s6 offset-s3" style={styles.inputField}/>
+              <input type="text" name="name" placeholder="Required Field" className="col s6 offset-s3" style={styles.inputField}/>
             </div>
           </label>
-          <label className="inputLabel">
+          <label style={styles.inputLabel}>
             What do you hope to find out  through your BlankSpace Experience?
             <div className="section"/>
             <div className="row">
-              <textarea value={this.state.value} onChange={this.handleChange} className="col s6 offset-s3" style={styles.businessInfo}/>
+              <textarea value={this.state.value} onChange={this.handleChange} placeholder="Required Field" className="col s6 offset-s3" style={styles.businessInfo}/>
             </div>
           </label>
           <input type="submit" value="Location Options" style={styles.locationOptionsBtn} />
@@ -49,23 +41,41 @@ class Application extends React.Component {
 }
 
 const styles = {
+  Application: {
+    textAlign: 'center'
+  },
+
+  inputLabel: {
+    color: 'black',
+    fontWeight: '500',
+    fontSize: '20px',
+  },
+
   inputField: {
     borderColor: '#0393DB',
     borderStyle: 'solid',
     borderRadius: 30,
-    borderWidth: 1
+    borderWidth: 1,
+    paddingLeft: '10px'
   },
+
   businessInfo: {
-    height: '200px',
+    height: '170px',
     borderColor: '#0393DB',
     borderStyle: 'solid',
     borderRadius: 30,
-    borderWidth: 1
+    borderWidth: 1,
+    padding: '10px',
   },
+
   locationOptionsBtn: {
     backgroundColor: '#0393DB',
     color: 'white',
-    borderRadius: 30
+    borderRadius: 30,
+    fontSize: '20px',
+    height: '40px',
+    paddingLeft: '15px',
+    paddingRight: '15px'
   }
 }
 
