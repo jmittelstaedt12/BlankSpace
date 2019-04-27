@@ -4,10 +4,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-
-      <p>
-      change
-      </p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
