@@ -34,7 +34,7 @@ class Application extends React.Component {
           </label>
           <Link to={{
             pathname: '/contact_info'
-          }}><input type="submit" value="Location Options" style={styles.locationOptionsBtn} /></Link>
+          }}><input type="submit" value="Contact Information" style={styles.locationOptionsBtn} /></Link>
         </form>
       </div>
     );
