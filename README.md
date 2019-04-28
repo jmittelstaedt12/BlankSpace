@@ -1,3 +1,4 @@
+![alt text](https://github.com/jmittelstaedt12/BlankSpace/blob/master/src/assets/Blank%20Space%20Horizontal.png)
 ## BlankSpace
 Built for HackFest 2019 Hackathon
 
