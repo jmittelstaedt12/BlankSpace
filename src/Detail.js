@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from './components/NavBar';
 import LocationCard from './components/LocationCard';
 import GoogleApiWrapper from './MapContainer';
 
@@ -16,7 +15,6 @@ class Detail extends React.Component {
     );
     return (
       <div style={styles.Detail}>
-        <NavBar/>
         <div className="row">
           <div className="col s6" style={styles.Main}>
             <div className="container">
@@ -37,7 +35,7 @@ const styles = {
     textAlign: 'center'
   },
   Main: {
-    backgroundColor: 'lightGray',
+    backgroundColor: '#EFEFEF',
     padding: 0,
     marginRight: -11,
   },

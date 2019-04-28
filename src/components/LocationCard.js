@@ -11,7 +11,7 @@ class LocationCard extends React.Component {
           <div className="card white" style={{'padding': '0px','margin': '10px'}}>
             <div className="card-content black-text" >
               <div className="row" style={{'marginBottom': '10px'}}>
-                <span className="col s5" style={styles.address}>{this.props.location.address}</span>
+                <span className="col s3" style={styles.address}>{this.props.location.address}</span>
                 <span className="col s4" style={styles.town}>{this.props.location.city}</span>
               </div>
               <div className="row" style={{'marginBottom': '10px'}}>

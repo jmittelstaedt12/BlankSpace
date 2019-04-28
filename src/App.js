@@ -8,10 +8,12 @@ import SiteInformation from './SiteInformation';
 import Application from './Application';
 import ContactInfo from './ContactInfo';
 import Confirmation from './Confirmation';
+import NavBar from './components/NavBar';
 export default class App extends Component {
   render() {
     return (
       <div>
+        <NavBar/>
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={()=><LandingFront/>}/>

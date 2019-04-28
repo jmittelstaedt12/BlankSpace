@@ -3,12 +3,15 @@ import './App.css';
 import ny from './assets/newyork.png';
 import la from './assets/losangeles.png';
 import tx from './assets/houston.png';
+import Brands from './landingpage/brands.js';
+import Explain from './landingpage/explain.js';
 import {Link} from 'react-router-dom';
 export default class LandingFront extends React.Component {
   render() {
     console.log("bruh")
     console.log("loc: "+Locations.NY[0].address)
     return(
+      <div>
       <div className="background-image">
         <div style={styles.link}>
           Taking your business from online to IRL
@@ -37,8 +40,10 @@ export default class LandingFront extends React.Component {
           </div>
         </div>
 
-
-      </div>
+        </div>
+        <Brands/>
+        <Explain/>
+    </div>
     )
   }
 }
@@ -51,7 +56,7 @@ const styles = {
     textAlign:'center',
     fontFamily: 'Lato',
     fontWeight: 'Normal',
-    paddingBottom: '450px',
+    paddingBottom: '180px',
     paddingTop: '40px'
   },
 

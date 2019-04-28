@@ -10,7 +10,6 @@ class ContactInfo extends React.Component {
   render() {
     return (
       <div style={styles.contactInfo}>
-        <NavBar/>
         <h2 style={{'fontWeight': 'bold'}}>Let's get in touch.</h2>
             <div className="row">
               <span className="col s1 offset-s3" style={styles.label}>Name</span>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from './components/NavBar.js'
 class Confirmation extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +15,6 @@ class Confirmation extends React.Component {
   render() {
     return (
       <div style={styles.Application}>
-        <NavBar/>
         <h2 style={{'fontWeight': 'bold'}}>Thank you!</h2>
         <p style={{'fontSize': '20px','fontStyle':'italic','color':'#747474'}}>A representative from BlankSpace will be in touch with you soon.</p>
       </div>

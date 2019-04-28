@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from './components/NavBar.js'
 import {Link} from 'react-router-dom';
 class Application extends React.Component {
   constructor(props) {
@@ -17,7 +16,6 @@ class Application extends React.Component {
   render() {
     return (
       <div style={styles.Application}>
-        <NavBar/>
         <h2 style={{'fontWeight': 'bold'}}>Tell us about your business.</h2>
         <form>
           <label style={styles.inputLabel}>
