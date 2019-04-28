@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar.js'
+import {Link} from 'react-router-dom';
+
 class ContactInfo extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +10,6 @@ class ContactInfo extends React.Component {
   render() {
     return (
       <div style={styles.contactInfo}>
-        <NavBar/>
         <h2 style={{'fontWeight': 'bold'}}>Let's get in touch.</h2>
             <div className="row">
               <span className="col s1 offset-s3" style={styles.label}>Name</span>
@@ -26,7 +27,9 @@ class ContactInfo extends React.Component {
               <span className="col s1 offset-s3" style={styles.label}>Email</span>
               <input type="text" name="name" placeholder="Required Field" className="col s5" style={styles.inputField}/>
             </div>
-          <input type="submit" value="Submit Application" style={styles.locationOptionsBtn} />
+            <Link to={{
+              pathname: '/confirmation'
+            }}><input type="submit" value="Submit Application" style={styles.locationOptionsBtn} /></Link>
       </div>
     );
   }

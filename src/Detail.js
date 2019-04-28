@@ -1,32 +1,30 @@
 import React, { Component } from 'react';
-import NavBar from './components/NavBar.js'
-import GoogleApiWrapper from './MapContainer.js';
+import LocationCard from './components/LocationCard';
+import GoogleApiWrapper from './MapContainer';
 
 class Detail extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: ''
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('An essay was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
   render() {
+    const locations = this.props.location.state.locations;
+    const locationCards = locations.map((location) =>
+      <div className="row">
+        <LocationCard location={location}/>
+      </div>
+    );
     return (
-      <div style={styles.Application}>
-        <NavBar/>
-        <GoogleApiWrapper/>
+      <div style={styles.Detail}>
+        <div className="row">
+          <div className="col s6" style={styles.Main}>
+            <div className="container">
+              {locationCards}
+            </div>
+          </div>
+          <div className="col s6">
+            <GoogleApiWrapper className="col s6" locations={locations}/>
+          </div>
+        </div>
       </div>
     );
   }
@@ -35,6 +33,11 @@ class Detail extends React.Component {
 const styles = {
   Detail: {
     textAlign: 'center'
+  },
+  Main: {
+    backgroundColor: '#EFEFEF',
+    padding: 0,
+    marginRight: -11,
   },
   mapStyles: {
     width: '100%',
