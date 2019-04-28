@@ -16,7 +16,7 @@ class Confirmation extends React.Component {
     return (
       <div style={styles.Application}>
         <h2 style={{'fontWeight': 'bold'}}>Thank you!</h2>
-        <p style={{'fontSize': '20px','fontStyle':'italic','color':'#747474'}}>A representative from BlankSpace will be in touch with you soon.</p>
+        <p style={{'fontSize': '20px','fontStyle':'italic','color':'#747474','paddingBottom': '300px'}}>A representative from BlankSpace will be in touch with you soon.</p>
       </div>
     );
   }
