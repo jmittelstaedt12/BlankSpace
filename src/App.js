@@ -9,6 +9,7 @@ import Application from './Application';
 import ContactInfo from './ContactInfo';
 import Confirmation from './Confirmation';
 import NavBar from './components/NavBar';
+import DetailPage from './DetailViewComponents/DetailPage.js';
 import Footer from './components/Footer';
 export default class App extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={()=><LandingFront/>}/>
+            <Route exact path="/site_information" component={DetailPage}/>
             <Route exact path="/detailed" component={Detail}/>
             <Route exact path="/site_information" component={SiteInformation}/>
             <Route exact path="/booking" component={Application}/>
