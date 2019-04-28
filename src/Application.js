@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar.js'
+import {Link} from 'react-router-dom';
 class Application extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +34,9 @@ class Application extends React.Component {
               <textarea value={this.state.value} onChange={this.handleChange} placeholder="Required Field" className="col s6 offset-s3" style={styles.businessInfo}/>
             </div>
           </label>
-          <input type="submit" value="Location Options" style={styles.locationOptionsBtn} />
+          <Link to={{
+            pathname: '/contact_info'
+          }}><input type="submit" value="Location Options" style={styles.locationOptionsBtn} /></Link>
         </form>
       </div>
     );
