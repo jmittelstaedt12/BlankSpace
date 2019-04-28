@@ -9,6 +9,7 @@ import Application from './Application';
 import ContactInfo from './ContactInfo';
 import Confirmation from './Confirmation';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 export default class App extends Component {
   render() {
     return (
@@ -24,6 +25,7 @@ export default class App extends Component {
             <Route exact path="/confirmation" component={Confirmation}/>
           </Switch>
         </BrowserRouter>
+        <Footer/>
       </div>
     );
   }
