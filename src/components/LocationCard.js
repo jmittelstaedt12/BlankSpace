@@ -11,18 +11,39 @@ class LocationCard extends React.Component {
           <div className="card white" style={{'padding': '0px','margin': '10px'}}>
             <div className="card-content black-text" >
               <div className="row" style={{'marginBottom': '10px'}}>
-                <span className="col s3" style={styles.address}>{this.props.location.address}</span>
-                <span className="col s4" style={styles.town}>{this.props.location.city}</span>
+                <span className="col s10 l3" style={styles.address}>{this.props.location.address}</span>
+                <span className="col s10 l4" style={styles.town}>{this.props.location.city}</span>
               </div>
               <div className="row" style={{'marginBottom': '10px'}}>
-                <span className="col s3" style={styles.size}>{this.props.location.size}</span>
-                <span className="col s4" style={styles.rate}>{this.props.location.price}</span>
+                <span className="col s10 l3" style={styles.size}>{this.props.location.size}</span>
+                <span className="col s10 l4" style={styles.rate}>{this.props.location.price}</span>
               </div>
               <div className="row" style={{'marginBottom': '0px'}}>
                 <div className="col s9">
                   <img className="responsive-img" src={require('../assets/storefronts/'+this.props.location.images+'.png')}/>
+                  {/*smalll  screen button*/}
+                    <div className="col s10 m10 hide-on-large-only" style={styles.cardButtonsMediumSmall}>
+                      <div className="row" style={{'marginBottom': '10px'}}>
+                        <Link to={{
+                          pathname: '/site_information',
+                          state: {
+                            locations: this.props.locations
+                          }
+                        }}><input className = "col s10" type="submit" value="View" style={styles.viewBtn} /></Link>
+                      </div>
+                      <div className="row" style={{'marginBottom': '0px'}}>
+                        <Link to={{
+                          pathname: '/booking',
+                          state: {
+                            locations: this.props.locations
+                          }
+                        }}><input className = "col s10" type="submit" value="Book" style={styles.bookBtn} /></Link>
+                      </div>
+                    </div>
                 </div>
-                <div className="col s3" style={styles.cardButtons}>
+
+                {/*large  screen button*/}
+                <div className="col l3 hide-on-med-and-down" style={styles.cardButtonsLarge}>
                   <div className="row" style={{'marginBottom': '10px'}}>
                     <Link to={{
                       pathname: '/site_information',
@@ -84,11 +105,18 @@ const styles = {
     height: 30,
     fontSize: '12px',
   },
-  cardButtons: {
+  cardButtonsLarge: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
-    padding: '0px'
+    // padding: '0px',
+    paddingTop: '130px'
+  },
+  cardButtonsMediumSmall: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    paddingLeft: '20px',
   }
 }
 
