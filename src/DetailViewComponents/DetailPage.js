@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import newyork from '../assets/newyork.png';
 import losangeles from '../assets/losangeles.png';
 import houston from '../assets/houston.png';
+import {Link} from 'react-router-dom';
 
 
 export default class DetailPage extends Component {
@@ -39,9 +40,18 @@ export default class DetailPage extends Component {
                   <div style={styles.subtitle}>Space Features</div>
                   <div style={styles.text}>-Hardwood Flooring</div>
                   <div style={styles.text}>-Natural Sunlight</div>
+
                 </div>
                 <div className="section"/>
 
+              </div>
+              <div className="row" style={{'marginBottom': '0px'}}>
+                <Link to={{
+                  pathname: '/booking',
+                  state: {
+                    location: this.props.location
+                  }
+                }}><input className = "col s10" type="submit" value="Book" style={styles.bookBtn} /></Link>
               </div>
 
               <div className="section"/>
@@ -70,5 +80,13 @@ const styles = {
   },
   noPadding: {
     padding: '0px'
+  },
+
+  bookBtn: {
+    backgroundColor: '#0393DB',
+    color: 'white',
+    borderRadius: 10,
+    height: 30,
+    fontSize: '12px'
   }
 }
