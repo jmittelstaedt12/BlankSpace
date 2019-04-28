@@ -1,7 +1,7 @@
 ## BlankSpace
 
 Built Using:
-Markup: * React
+* React
 * Node.js
 * Heroku
 * Google Maps API
