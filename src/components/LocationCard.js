@@ -27,7 +27,7 @@ class LocationCard extends React.Component {
                         <Link to={{
                           pathname: '/site_information',
                           state: {
-                            locations: this.props.locations
+                            locations: this.props.location
                           }
                         }}><input className = "col s10" type="submit" value="View" style={styles.viewBtn} /></Link>
                       </div>
@@ -35,7 +35,7 @@ class LocationCard extends React.Component {
                         <Link to={{
                           pathname: '/booking',
                           state: {
-                            locations: this.props.locations
+                            locations: this.props.location
                           }
                         }}><input className = "col s10" type="submit" value="Book" style={styles.bookBtn} /></Link>
                       </div>
@@ -48,7 +48,7 @@ class LocationCard extends React.Component {
                     <Link to={{
                       pathname: '/site_information',
                       state: {
-                        locations: this.props.locations
+                        locations: this.props.location
                       }
                     }}><input className = "col s10" type="submit" value="View" style={styles.viewBtn} /></Link>
                   </div>
@@ -56,7 +56,7 @@ class LocationCard extends React.Component {
                     <Link to={{
                       pathname: '/booking',
                       state: {
-                        locations: this.props.locations
+                        locations: this.props.location
                       }
                     }}><input className = "col s10" type="submit" value="Book" style={styles.bookBtn} /></Link>
                   </div>

@@ -26,7 +26,7 @@ class Application extends React.Component {
             </div>
           </label>
           <label style={styles.inputLabel}>
-            What do you hope to find out  through your BlankSpace Experience?
+            What do you plan to use your BlankSpace for?
             <div className="section"/>
             <div className="row">
               <textarea value={this.state.value} onChange={this.handleChange} placeholder="Required Field" className="col s6 offset-s3" style={styles.businessInfo}/>
